@@ -6,9 +6,7 @@ using UnityEngine.UI;
 [CreateAssetMenu(fileName = "QuestInfoSO", menuName = "Quest", order = 1)]
 public class QuestInfoSO : ScriptableObject
 {
-    /*[field: SerializeField]*/
-    public string id; /*{ get; private set; }*/
-    public string displayName;
+    public string id;
     public string progressText;
     public QuestState status;
 
