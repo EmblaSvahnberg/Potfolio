@@ -9,18 +9,11 @@ public class GameData
 {
     public long lastUpdated;
 
-    public string currentScene;
-    public bool movingFromMenu;
-
-    public Vector3 playerPosition;
-
     public List<QuestSaveData> savedQuests;
 
-    //the values defined in this constructur will be the default values the game starts with when there´s no data to load
+    //the values defined in this constructur will be the default values the game starts with when thereÂ´s no data to load
     public GameData()
     {
-        currentScene = null;
-        playerPosition = new Vector3(-60, 7, -5);
         savedQuests = new List<QuestSaveData>();
     }
 }
