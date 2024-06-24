@@ -18,8 +18,6 @@ public class DataPersistenceManager : MonoBehaviour
 
     private string selectedProfileId = "";
 
-    private Coroutine autoSaveCoroutine;
-
     public static DataPersistenceManager instance { get; private set; }
 
     private void Awake()
@@ -57,13 +55,6 @@ public class DataPersistenceManager : MonoBehaviour
     {
         this.dataPersistenceObjects = FindAllDataPersistenceObjects();
         LoadGame();
-
-        // start up the auto saving coroutine
-        //if (autoSaveCoroutine != null)
-        //{
-        //    StopCoroutine(autoSaveCoroutine);
-        //}
-        //autoSaveCoroutine = StartCoroutine(AutoSave());
     }
 
     public void ChangeSelectedProfileID(string newProfileId)
@@ -132,13 +123,11 @@ public class DataPersistenceManager : MonoBehaviour
             return;
         }
 
-        Debug.Log("Save");
-
+        //Saves currentScene and movingFromMenu in GameData
         if (SceneManager.GetActiveScene().name != "StartMenu")
         {
             gameData.currentScene = SceneManager.GetActiveScene().name;
             gameData.movingFromMenu = false;
-
         }
         else
         {

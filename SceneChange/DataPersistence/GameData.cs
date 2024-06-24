@@ -14,14 +14,9 @@ public class GameData
 
     public Vector3 playerPosition;
     
-    //entry point save
-    //make entry point = to a player position
-    //if entry point is not null then do this instead of playerPosition
-    //put entry point to null afterword
-
     public List<QuestSaveData> savedQuests;
 
-    //the values defined in this constructur will be the default values the game starts with when there´s no data to load
+    //the values defined in this constructur will be the default values the game starts with when thereÂ´s no data to load
     public GameData()
     {
         currentScene = null;
